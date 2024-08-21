@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <header class="header"><img class="logo__header" src="images/logo header.png">
+        <h1 class="titulo__header"></h1>ENCRIPTADOR DE TEXTO
+    </header>
+    <main class="main">
+        <section class="input">
+            <textarea type="text" class="input__textarea" id="input__textarea" oninput="verificarTexto(event) "
+                placeholder="Ingresa el texto aquí"></textarea>
+            <p class="input__advertencia"><i class="material-icons">error</i>Solo letras minúsculas y sin
+                acentos</p>
+            <div class="botones__input">
+                <button class="boton__encriptar" id="boton__encriptar" type="button"
+                    onclick="encriptarTexto()">Encriptar</button>
+                <button class="boton__desencriptar" id="boton__desencriptar" type="button"
+                    onclick="desencriptarTexto()">Desencriptar</button>
+            </div>
+        </section>
+
+
+        <section class="output">
+            <textarea class="output__textarea" id="output__textarea"></textarea>
+            <img class="output__img" id="output__img" src="images/Muñeco.png" alt="imagen de un muñeco">
+            <h2 class="output__titulo" id="output__titulo">Ningún mensaje fue encontrado</h2>
+            <p class="output__parrafo" id="output__parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
+            <div class="botones__output">
+                <button class="boton__copiar" id="boton__copiar" type="button" onclick="copiarTexto()">Copiar</button>
+                <button class="boton__borrar" id="boton__borrar" type="button" onclick="borrarTexto()">Borrar</button>
+            </div>
+
+        </section>
+
+        
+
+    </main>
+    <footer class="footer">
+        <p>Desarrollado por Luis Eduardo Calvo</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="animation.js"></script>
+    <script src="events.js"></script>
+
+
+
+</body>
+
+</html>
