@@ -49,7 +49,7 @@ function desencriptarTexto() {
 
 function verificarTexto(event) {
     const texto = event.target.value;
-    const regex = /[A-ZÁÉÍÓÚáéíóúñÑ]/g;
+    const regex = /[^a-z\s]/g;
     if (regex.test(texto)) {
         alert("Por favor, ingrese solo letras minúsculas sin acentos.");
         event.target.value = texto.replace(regex, "");
